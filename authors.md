@@ -16,7 +16,7 @@
 Source:
 [`DESCRIPTION`](https://github.com/rjdverse/rjd3tramoseats/blob/develop/DESCRIPTION)
 
-Palate J, Quartier-la-Tente A, Barthelemy T, Smyk A (2025).
+Palate J, Quartier-la-Tente A, Barthelemy T, Smyk A (2026).
 *rjd3tramoseats: Seasonal Adjustment with TRAMO-SEATS in 'JDemetra+
 3.x'*. R package version 3.6.0.9000,
 <https://github.com/rjdverse/rjd3tramoseats>.
@@ -24,7 +24,7 @@ Palate J, Quartier-la-Tente A, Barthelemy T, Smyk A (2025).
     @Manual{,
       title = {rjd3tramoseats: Seasonal Adjustment with TRAMO-SEATS in 'JDemetra+ 3.x'},
       author = {Jean Palate and Alain Quartier-la-Tente and Tanguy Barthelemy and Anna Smyk},
-      year = {2025},
+      year = {2026},
       note = {R package version 3.6.0.9000},
       url = {https://github.com/rjdverse/rjd3tramoseats},
     }
