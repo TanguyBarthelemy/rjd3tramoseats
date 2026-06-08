@@ -18,15 +18,27 @@ A specification can be created with
 [`rjd3tramoseats::tramo_spec()`](https://rjdverse.github.io/rjd3tramoseats/reference/tramoseats_spec.md)
 or
 [`rjd3tramoseats::tramoseats_spec()`](https://rjdverse.github.io/rjd3tramoseats/reference/tramoseats_spec.md)
-and can be modified with the following functions:
+and modified with the following functions:
 
-- for pre-processing: `rjd3tramoseats::set_arima()`,
-  `rjd3tramoseats::set_automodel()`, `rjd3tramoseats::set_basic()`,
-  `rjd3tramoseats::set_easter()`, `rjd3tramoseats::set_estimate()`,
-  `rjd3tramoseats::set_outlier()`, `rjd3tramoseats::set_tradingdays()`,
-  `rjd3tramoseats::set_transform()`, `rjd3tramoseats::add_outlier()`,
-  `rjd3tramoseats::remove_outlier()`, `rjd3tramoseats::add_ramp()`,
-  `rjd3tramoseats::remove_ramp()`, `rjd3tramoseats::add_usrdefvar()`;
+- for pre-processing:
+  [`rjd3toolkit::set_arima()`](https://rjdverse.github.io/rjd3toolkit/reference/set_arima.html),
+  [`rjd3toolkit::set_automodel()`](https://rjdverse.github.io/rjd3toolkit/reference/set_automodel.html),
+  [`rjd3toolkit::set_basic()`](https://rjdverse.github.io/rjd3toolkit/reference/set_basic.html),
+  [`rjd3toolkit::set_easter()`](https://rjdverse.github.io/rjd3toolkit/reference/set_easter.html),
+  [`rjd3toolkit::set_estimate()`](https://rjdverse.github.io/rjd3toolkit/reference/set_estimate.html),
+  [`rjd3toolkit::set_outlier()`](https://rjdverse.github.io/rjd3toolkit/reference/set_outlier.html),
+  [`rjd3toolkit::set_tradingdays()`](https://rjdverse.github.io/rjd3toolkit/reference/set_tradingdays.html),
+  [`rjd3toolkit::set_transform()`](https://rjdverse.github.io/rjd3toolkit/reference/set_transform.html),
+  [`rjd3toolkit::add_outlier()`](https://rjdverse.github.io/rjd3toolkit/reference/add_outlier.html),
+  [`rjd3toolkit::remove_outlier()`](https://rjdverse.github.io/rjd3toolkit/reference/add_outlier.html),
+  [`rjd3toolkit::add_ramp()`](https://rjdverse.github.io/rjd3toolkit/reference/add_outlier.html),
+  [`rjd3toolkit::remove_ramp()`](https://rjdverse.github.io/rjd3toolkit/reference/add_outlier.html),
+  [`rjd3toolkit::add_usrdefvar()`](https://rjdverse.github.io/rjd3toolkit/reference/add_usrdefvar.html);
+
+- for decomposition: `rjd3x13::set_x11()`;
+
+- for benchmarking:
+  [`rjd3toolkit::set_benchmarking()`](https://rjdverse.github.io/rjd3toolkit/reference/set_benchmarking.html).
 
 - for decomposition:
   [`rjd3tramoseats::set_seats()`](https://rjdverse.github.io/rjd3tramoseats/reference/set_seats.md);
@@ -42,9 +54,10 @@ a configuration in R is explained
 
 **🎉 {rjd3tramoseats} is now available on CRAN! 🎉**
 
-To install it, you have to launch the following command line:
+To install it, just launch the following command line:
 
 ``` r
+
 install.packages("rjd3tramoseats")
 ```
 
@@ -52,13 +65,17 @@ To get the current development version of **{rjd3tramoseats}** from
 [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("rjdverse/rjd3tramoseats")
 ```
 
 ## Usage
 
+### Seasonal Adjustment with Tramo-Seats
+
 ``` r
+
 library("rjd3tramoseats")
 y <- rjd3toolkit::ABS$X0.2.09.10.M
 ts_model <- tramoseats(y)
@@ -95,27 +112,6 @@ plot(ts_model) # Plot of the final decomposition
 ```
 
 ![](reference/figures/README-ts-final-1.png)
-
-To get the final components you can use the function
-[`rjd3toolkit::sa_decomposition()`](https://rjdverse.github.io/rjd3toolkit/reference/sa_decomposition.html):
-
-``` r
-rjd3toolkit::sa_decomposition(ts_model)
-#> Last values
-#>          series       sa    trend      seas       irr
-#> Sep 2016 1393.5 1552.616 1561.206 0.8975174 0.9944979
-#> Oct 2016 1497.4 1568.366 1559.217 0.9547514 1.0058681
-#> Nov 2016 1684.3 1528.962 1557.382 1.1015974 0.9817508
-#> Dec 2016 2850.4 1542.997 1556.132 1.8473143 0.9915588
-#> Jan 2017 1428.5 1545.950 1555.502 0.9240275 0.9938587
-#> Feb 2017 1092.4 1551.369 1555.210 0.7041521 0.9975303
-#> Mar 2017 1370.3 1553.207 1555.087 0.8822391 0.9987913
-#> Apr 2017 1522.6 1580.752 1554.759 0.9632123 1.0167187
-#> May 2017 1452.4 1554.517 1553.908 0.9343093 1.0003924
-#> Jun 2017 1557.2 1551.804 1552.778 1.0034774 0.9993726
-#> Jul 2017 1445.5 1544.701 1551.717 0.9357801 0.9954781
-#> Aug 2017 1303.1 1535.588 1550.949 0.8485999 0.9900960
-```
 
 ## Package Maintenance and contributing
 
