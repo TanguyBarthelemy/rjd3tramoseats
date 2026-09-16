@@ -32,6 +32,7 @@ Encoding: UTF-8
 SystemRequirements: Java (>= 21)
 Collate: 
     'deprecated.R'
+    'options.R'
     'print.R'
     'utils.R'
     'tramoseats_rslts.R'
@@ -49,7 +50,7 @@ Suggests:
     spelling
 Language: en-GB
 Roxygen: list(markdown = TRUE)
-Config/roxygen2/version: 8.0.0
-Remotes:  
+Config/roxygen2/version: 8.1.0
+Remotes: 
     github::rjdverse/rjd3jars,
     github::rjdverse/rjd3toolkit
