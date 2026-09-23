@@ -1,4 +1,4 @@
-#' Set an option for tramoseats
+#' @title Set an option for tramoseats
 #'
 #' @param name Name of the option
 #' @param obj Option
@@ -16,7 +16,7 @@ tramoseats_option <- function(name, obj) {
     return(invisible(NULL))
 }
 
-#' Set an option for tramoseats
+#' @title Set an option for tramoseats
 #'
 #' @param name Name of the option
 #'
